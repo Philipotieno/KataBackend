@@ -1,0 +1,9 @@
+venv/
+*.pyc
+*.pyo
+*~
+*#*#
+*.orig
+src/media/
+__pycache__/
+data/
