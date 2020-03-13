@@ -55,7 +55,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_gis',
 
-    'birds'
+    'birds',
+    'locations',
 ]
 
 MIDDLEWARE = [
@@ -157,9 +158,18 @@ REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': (
         'rest_framework.filters.DjangoFilterBackend',
     ),
-    'PAGE_SIZE': 100
+    'DEFAULT_PAGINATION_CLASS':'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE':env.int('DJANGO_DEFAULT_PAGE_SIZE', default=25),
+    'DEFAULT_FILTER_BACKENDS': (
+        'rest_framework.filters.SearchFilter',
+        'django_filters.rest_framework.DjangoFilterBackend',
+    ),
 }
 
 CORS_ORIGIN_WHITELIST = (
     'localhost:3000',
 )
+
+ADMIN_SITE_HEADER = "Kata Database API"
+ADMIN_SITE_TITLE = "Kata Database API"
+ADMIN_INDEX_TITLE = "Administration"
