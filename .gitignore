@@ -7,3 +7,5 @@ venv/
 src/media/
 __pycache__/
 data/
+.vscode/
+.env
