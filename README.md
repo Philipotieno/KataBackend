@@ -38,4 +38,14 @@ Running
 -------
 `$ ./manage.py runserver`
 
+
+Layout
+------
+* 'test_data/' - Sample CSV data used for testing purposes
+* `src/birds/` - Bird models and helpers
+* `src/keadatabase/` - Project settings
+* `src/locations/` - StudyArea models and helpers
+* `src/synchronise/` - Command and helpers that syncs Django DB with provided CSVs
+* `src/theme/` - Django REST Framework customisations
+
 https://github.com/electricmagnetic/keadatabase-back/commits/master?after=e2e082b1f555dc63854a07b27bbd99fe7bdbfcd8+139
