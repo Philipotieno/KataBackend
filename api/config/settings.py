@@ -15,9 +15,9 @@ import environ
 
 
 # Project Base Paths
-# project_root/api/settings.py - 2 = project_root/
-ROOT_DIR = environ.Path(__file__) - 2
-API_DIR = ROOT_DIR.path('api')
+# project_root/config/settings.py - 3 = project_root/
+ROOT_DIR = environ.Path(__file__) - 3
+API_DIR = ROOT_DIR.path('config')
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
@@ -70,7 +70,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'api.urls'
+ROOT_URLCONF = 'config.urls'
 
 TEMPLATES = [
     {
@@ -88,7 +88,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'api.wsgi.application'
+WSGI_APPLICATION = 'config.wsgi.application'
 
 
 # Database
