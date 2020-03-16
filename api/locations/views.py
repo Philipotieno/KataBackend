@@ -7,3 +7,4 @@ class StudyAreaViewSet(viewsets.ReadOnlyModelViewSet):
     queryset = StudyArea.objects.all()
     serializer_class = StudyAreaSerializer
     filter_fields = ('name',)
+    search_fields = ('name',)
